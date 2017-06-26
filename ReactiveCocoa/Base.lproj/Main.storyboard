@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +21,70 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbG-3z-T4W">
+                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fYY-NE-Wi7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBx-aI-o72">
+                                <rect key="frame" x="68.5" y="318" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hee-x9-Io7">
+                                <rect key="frame" x="260.5" y="318" width="98.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hiz-xj-NIj">
+                                <rect key="frame" x="67.5" y="398.5" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="BxC-wW-qpL"/>
+                                    <constraint firstAttribute="height" constant="128" id="I0C-kP-hCi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtb-dV-X9f">
+                                <rect key="frame" x="68" y="140" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="tXa-Gy-umc"/>
+                                    <constraint firstAttribute="height" constant="128" id="xcU-XF-TdH"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eII-bm-uHh">
+                                <rect key="frame" x="165" y="189" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RbG-3z-T4W" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7qS-Nd-7BF"/>
+                            <constraint firstItem="bBx-aI-o72" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BaZ-BM-nCt"/>
+                            <constraint firstItem="hee-x9-Io7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FD9-lL-yue"/>
+                            <constraint firstItem="hee-x9-Io7" firstAttribute="leading" secondItem="RbG-3z-T4W" secondAttribute="trailing" constant="50" id="VtC-z2-Zol"/>
+                            <constraint firstItem="RbG-3z-T4W" firstAttribute="leading" secondItem="bBx-aI-o72" secondAttribute="trailing" constant="50" id="f5i-wr-jrB"/>
+                            <constraint firstItem="eII-bm-uHh" firstAttribute="centerY" secondItem="rtb-dV-X9f" secondAttribute="centerY" id="fek-NF-ucF"/>
+                            <constraint firstItem="eII-bm-uHh" firstAttribute="centerX" secondItem="rtb-dV-X9f" secondAttribute="centerX" id="jQ5-Yx-YOL"/>
+                            <constraint firstItem="rtb-dV-X9f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lq1-we-Nbd"/>
+                            <constraint firstItem="hee-x9-Io7" firstAttribute="top" secondItem="rtb-dV-X9f" secondAttribute="bottom" constant="50" id="nbR-4F-pPr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hee-x9-Io7" secondAttribute="trailing" id="rVh-QU-4dR"/>
+                            <constraint firstItem="hiz-xj-NIj" firstAttribute="top" secondItem="RbG-3z-T4W" secondAttribute="bottom" constant="50" id="s6O-8e-K2s"/>
+                            <constraint firstItem="hiz-xj-NIj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wuv-ab-s4R"/>
+                            <constraint firstItem="RbG-3z-T4W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zvE-9C-vbU"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Btn" destination="bBx-aI-o72" id="NC0-th-ws9"/>
+                        <outlet property="VIEW" destination="rtb-dV-X9f" id="iNK-BB-jnI"/>
+                        <outlet property="text" destination="hee-x9-Io7" id="cWj-F0-xsz"/>
+                        <outlet property="textView" destination="hiz-xj-NIj" id="3P8-nh-Uen"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
